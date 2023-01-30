@@ -12,7 +12,11 @@ $increase.addEventListener('click',function () {
 
 
 $decrease.addEventListener('click',function () {
-    num--;
-    $counter.innerHTML=num;
-    console.log(`감소버튼 클릭 현재클릭수 ${num}`)
+    if(num>0) {
+        num--;
+        $counter.innerHTML = num;
+        console.log(`감소버튼 클릭 현재클릭수 ${num}`)
+    }else {
+        console.log(`${num}에서는 작동하지않습니다!!`)
+    }
 })
